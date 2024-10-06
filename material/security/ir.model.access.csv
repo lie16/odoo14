@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_material_material_type,access.material.material_type,model_material_material_type,,1,1,1,1

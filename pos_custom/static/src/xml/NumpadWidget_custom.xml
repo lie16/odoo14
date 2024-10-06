@@ -1,0 +1,37 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!-- Template for adding toggle icon in pos Product screen-->
+<!--<templates id="template" xml:space="preserve">-->
+<!--    <t t-inherit="point_of_sale.PaymentScreenNumpad" t-inherit-mode="extension"-->
+<!--       owl="1">-->
+<!--        <xpath expr="//PSNumpadInputButton[@value('+10')]" position="replace">-->
+<!--            <PSNumpadInputButton value="'+100'" changeClassTo="'mode-button'" />-->
+<!--        </xpath>-->
+<!--        <xpath expr="//PSNumpadInputButton[@value('+20')]" position="replace">-->
+<!--            <PSNumpadInputButton value="'+200'" changeClassTo="'mode-button'" />-->
+<!--        </xpath>-->
+<!--        <xpath expr="//PSNumpadInputButton[@value('+50')]" position="replace">-->
+<!--            <PSNumpadInputButton value="'+500'" changeClassTo="'mode-button'" />-->
+<!--        </xpath>-->
+<!--    </t>-->
+<!--</templates>-->
+
+<!--<templates id="template" xml:space="preserve">-->
+<!--    <t t-inherit="point_of_sale.PSNumpadInputButton" t-inherit-mode="extension"-->
+<!--       owl="1">-->
+<!--        <xpath expr="//div[contains(@class, 'numpad')]/PSNumpadInputButton[@value='+10']" position="replace">-->
+<!--            <PSNumpadInputButton value="'+100'" changeClassTo="'mode-button'" />-->
+<!--        </xpath>-->
+<!--    </t>-->
+<!--</templates>-->
+
+<!--<templates id="template" xml:space="preserve">-->
+<!--    <t t-inherit="point_of_sale.PaymentScreenNumpad" t-inherit-mode="extension"-->
+<!--       owl="1">-->
+<!--        <xpath expr="//div[hasclass('numpad')]" position="after">-->
+<!--                <div style="text-align: center;">-->
+<!--                    <i class="numpad-toggle fa fa-fw fa-eye fa-2x">-->
+<!--                    </i>-->
+<!--                </div>-->
+<!--        </xpath>-->
+<!--    </t>-->
+<!--</templates>-->

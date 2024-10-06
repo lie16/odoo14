@@ -1,0 +1,65 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_material_type_tree" model="ir.ui.view">
+        <field name="name">material.type.tree</field>
+        <field name="model">material.material_type</field>
+        <field name="arch" type="xml">
+            <tree string="Material Types">
+                <field name="material_code"/>
+                <field name="material_name"/>
+                <field name="material_type"/>
+                <field name="material_buy_price"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_material_type_filter" model="ir.ui.view">
+        <field name="name">material.material.type.search</field>
+        <field name="model">material.material_type</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="filter_cotton" string="Cotton" domain="[('material_type', '=', 'cotton')]"/>
+                <filter name="filter_fabrics" string="Fabrics" domain="[('material_type', '=', 'fabrics')]"/>
+                <filter name="filter_jeans" string="Jeans" domain="[('material_type', '=', 'jeans')]"/>
+                <filter name="filter_all" string="All" domain="[]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_material_type_form" model="ir.ui.view">
+        <field name="name">material.type.form</field>
+        <field name="model">material.material_type</field>
+        <field name="arch" type="xml">
+            <form string="Material Type">
+                <sheet>
+                    <group>
+                        <field name="material_code"/>
+                        <field name="material_name"/>
+                        <field name="material_type"/>
+                        <field name="material_buy_price"/>
+                        <field name="partner_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action to open the Material Types views -->
+    <record id="action_material_type" model="ir.actions.act_window">
+        <field name="name">Material Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">material.material_type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Root Menu Item for Materials -->
+    <menuitem id="menu_material_root" name="Materials" sequence="10"/>
+
+    <!-- Submenu Item for Material -->
+    <menuitem id="menu_material" name="Material" parent="menu_material_root" sequence="10"/>
+
+    <!-- Submenu for Material Types -->
+    <menuitem id="menu_material_type" name="Material Types" parent="menu_material" action="action_material_type" sequence="10"/>
+</odoo>
